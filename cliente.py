@@ -1,14 +1,18 @@
+from pessoa import Pessoa
 
 
-class Cliente:
-    def __init__(self, nome, cpf):
-        self.nome = nome
-        self.cpf = cpf
+class Cliente(Pessoa):
+    def __init__(self, nome, idade, sexo, cpf, endereco):
+        super().__init__(nome, idade, sexo, cpf)
+        self.endereco = endereco
 
     def getCliente(self):
-        return Cliente(self.nome, self.cpf)
+        return Cliente(self.nome, self.idade, self.sexo, self.cpf, self.endereco)
 
-    def setCliente(self, nome, cpf):
+    def setCliente(self, nome, idade, sexo, cpf, endereco):
         self.nome = nome
+        self.idade = idade
+        self.sexo = sexo
         self.cpf = cpf
+        self.endereco = endereco
 
