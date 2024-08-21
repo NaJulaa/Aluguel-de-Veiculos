@@ -1,6 +1,6 @@
 from veiculo import Veiculo
 
-veiculos = []
+veiculos = {}
 class Veiculos:
 
     def __init__(self, lista):
